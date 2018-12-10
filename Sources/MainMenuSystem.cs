@@ -20,18 +20,18 @@ namespace UniCraft.MenuSystem
 
         [Header("Introduction Setting")]
         [SerializeField] private KeyCode _keyToPress = KeyCode.A;
-        [SerializeField] private bool _useAnyKey;
-        private bool _bIsIntroductionDone;
+        [SerializeField] private bool _useAnyKey = false;
+        private bool _bIsIntroductionDone = false;
         
         /////////////////////////////////
         ////////// Unity Event //////////
         
         [Header("Unity Event")]
-        [SerializeField] private UnityEvent _onStartIntroductionEvents;
-        [SerializeField] private UnityEvent _onOpenMainMenuPanelEvents;
-        [SerializeField] private UnityEvent _onOpenSettingsPanelEvents;
-        [SerializeField] private UnityEvent _onOpenCreditsPanelEvents;
-        [SerializeField] private UnityEvent _onExitGameEvents;
+        [SerializeField] private UnityEvent _onStartIntroductionEvents = null;
+        [SerializeField] private UnityEvent _onOpenMainMenuPanelEvents = null;
+        [SerializeField] private UnityEvent _onOpenSettingsPanelEvents = null;
+        [SerializeField] private UnityEvent _onOpenCreditsPanelEvents = null;
+        [SerializeField] private UnityEvent _onExitGameEvents = null;
         
         ////////////////////////////
         ////////// Method //////////
