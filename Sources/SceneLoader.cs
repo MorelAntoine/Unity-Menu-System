@@ -26,7 +26,7 @@ namespace UniCraft.MenuSystem
         /////////////////////////////////
         ////////// Unity Event //////////
 
-        [SerializeField] private UnityEvent _onStartLoadingEvents = null;
+        [SerializeField] private UnityEvent _onStartLoadingSceneEvents = null;
         
         ////////////////////////////
         ////////// Method //////////
@@ -50,7 +50,7 @@ namespace UniCraft.MenuSystem
 
         private IEnumerator LoadScene(AsyncOperation asyncOperation)
         {
-            _onStartLoadingEvents.Invoke();
+            _onStartLoadingSceneEvents.Invoke();
             while ( !asyncOperation.isDone )
             {
                 if ( _progressBar )
